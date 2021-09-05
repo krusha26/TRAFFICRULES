@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="unnamed.jpg" type="image/x-icon">
+	<title>Traffic rules and regulation</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="themes/css/bootstrappage.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+	.body {
+		background-color: #ffd400;
+	}
+
+	.sticky {
+		position: sticky;
+		top: 0;
+	}
+
+	.dropbtn {
+		background-color: black;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		right: 0;
+		background-color: black;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+	}
+
+	.dropdown-content a {
+		color: white;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: darkred;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+		background-color: darkred;
+	}
+
+	.traffic-options {
+		width: 100%;
+	}
+
+	.traffic-options-list {
+		list-style-type: none;
+
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li a {
+		color: white;
+		text-align: center;
+		padding: 15px;
+		text-decoration: none;
+		float: left;
+		margin: auto;
+
+	}
+
+	li a:hover {
+		background-color: rgb(127, 246, 123);
+		/* width: auto; */
+		margin: auto;
+
+	}
+
+	.dropdown:hover .dropbtn:hover {
+		background-color: red;
+	}
+
+	li.dropdown {
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	* {
+		box-sizing: border-box;
+		/* width: 100%; */
+	}
+
+	body {
+		font-family: Verdana, sans-serif;
+	}
+
+	.mySlides {
+		display: none;
+	}
+
+	.mySlides img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
+	}
+
+	img {
+		vertical-align: middle;
+	}
+
+	.slideshow-container {
+		max-width: 1000px;
+		height: 600px;
+		position: relative;
+		margin: auto;
+		overflow: hidden;
+
+	}
+
+	.dot {
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.active {
+		background-color: #717171;
+	}
+
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {
+			opacity: .4
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+	@keyframes fade {
+		from {
+			opacity: .4
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+	@media only screen and (max-width: 300px) {
+		.text {
+			font-size: 11px
+		}
+	}
+
+	.title-bar {
+		align-content: center;
+		background-color: #ffd400;
+		padding: 20px;
+	}
+
+	.traffic-rules {
+		margin: 20px;
+	}
+
+	.row {
+		margin: 20px;
+		margin-right: 15px;
+	}
+
+	button:hover {
+		background-color: #585454;
+	}
+</style>
+</head>
+
+<body>
+	<div class="body">
+		<div>
+			<div class="col-xl-6 title-bar">
+				<img class="col-md-3 police-logo" src="unnamed.jpg" height="auto">
+
+				<div class="dropdown">
+					<button class="dropbtn">News</button>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">Contacts</button>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">About</button>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">Home</button>
+				</div>
+			</div>
+		</div>
+
+		<h1 class="traffic-rules" style="text-align:center"><i>Traffic Rules</i></h1>
+
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img
+					src="60183315-perspetive-view-of-numerous-french-traffic-road-signs-concept-image-for-background-3d-illustration.jpg">
+			</div>
+			<div class="mySlides fade">
+				<img src="519314674-H.jpg">
+			</div>
+			<div class="mySlides fade">
+				<img src="roadsigns.jpg">
+			</div>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) { slideIndex = 1 }
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				setTimeout(showSlides, 2000); // Change image every 2 seconds
+			}
+		</script>
+		</br>
+
+		<div class="traffic-options">
+			<div class="traffic-options-list">
+				<ul class="row ">
+					<li class="col"><a href=""><img
+								src="https://traffic-rules.com/img/asia/in/country-exam.png">Practice Test</a></li>
+					<li class="col"><a href=""><img
+								src="https://traffic-rules.com/img/asia/in/country-signs.png">Traffic Rules</a></li>
+					<li class="col"><a href=""><img src="https://traffic-rules.com/img/international/layout/videos.png"
+								height="110px">Youtube</a></li>
+					<li class="col"><a href=""><img
+								src="https://traffic-rules.com/img/international/layout/safety-signs.png">Safety
+							Signs</a></li>
+					<li class="col"><a href=""><img
+								src="https://traffic-rules.com/img/international/layout/comments.png">Community</a></li>
+				</ul>
+			</div>
+		</div>
+		</br>
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 style="font-size: 30px;">Traffic rules in India!</h1>
+
+				<p>An online community for driving license and road safety education. Take a free practice test and
+					learn about
+					traffic rules and traffic signs.</p>
+				<hr>
+
+				<div class="row" style="font-size: 14px;">
+					<div class="col-xs-12 col-sm-4" style="z-index: 9;">
+						<p>
+							<img style="max-height: 15px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Up-to-date traffic rules."
+						</p>
+						<p>
+							<img style="max-height: 5px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Learn the traffic signs. "
+						</p>
+						<p>
+							<img style="max-height: 5px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Preparation theory exam."
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-4" style="z-index: 9; align-content: right;">
+						<p>
+							<img style="max-height: 5px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Road safety videos."
+						</p>
+						<p>
+							<img style="max-height: 5px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Take the practice tests. "
+						</p>
+						<p>
+							<img style="max-height: 5px,"
+								src="https://traffic-rules.com/img/international/layout/question-correct.png">
+							" Get your driving license."
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-4" style="z-index: 9; align-content: right;">
+						<p>
+							<img src="https://traffic-rules.com/img/asia/in/country-home.png">
+
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="container fluid">
+			<div style="background-color: darkblue;">
+				<div class="row">
+					<img class="img-responsive center-block" style="max-height: 100px; margin-top: 25px;"
+						src="https://traffic-rules.com/img/asia/in/country-signs.png" align="right">
+					<h1 style="color: white; align-self: center;">Traffic Signs</h1>
+					<p style="color:white;">
+						"The traffic signs are located on the side or top of the road. They give directions on how we
+						should behave
+						on
+						the road, so that the traffic can proceed safely and smoothly. Everyone must know the traffic
+						signs!"
+					</p>
+				</div>
+				<hr>
+				<hr>
+			</div>
+		</div>
+		<div class="panel panel-info" style="border-color: #e0e0e0;">
+			<div class="row text-center" style="padding-top: 30px;">
+				<div class="row">
+					<div class="col">
+						<a href="#">
+							<img style="max-height:100px" class="img-responsive center-block"
+								src="https://traffic-rules.com/img/asia/in/signs/warning.png" alt="">
+							<h2>Warning Signs</h2>
+						</a>
+						<p style="padding-bottom: 10px;">
+							"The warning signs are placed to warn road users of a potentially dangerous traffic
+							situation."
+						</p>
+						<hr class="visible-xs">
+					</div>
+					<div class="col">
+						<a href="#">
+							<img style="max-height:100px" class="img-responsive center-block"
+								src="https://traffic-rules.com/img/asia/in/signs/mandatory.png" alt="">
+							<h2>Mandatory Signs</h2>
+						</a>
+						<p style="padding-bottom: 10px;">
+							"The mandatory signs impose an obligation/command that road users must comply with."
+						</p>
+						<hr class="visible-xs">
+					</div>
+					<div class="col">
+						<a href="#">
+							<img style="max-height:100px" class="img-responsive center-block"
+								src="https://traffic-rules.com/img/asia/in/signs/priority.png" alt="">
+							<h2>Priority Signs</h2>
+						</a>
+						<p style="padding-bottom: 10px;">
+							"The priority signs have an influence on the priority rules. They indicate who has priority
+							and
+							who should
+							give priority."
+						</p>
+						<hr class="visible-xs">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<a href="">
+							<img style="max-height:100px" class="img-responsive center-block"
+								src="https://traffic-rules.com/img/asia/in/signs/information.png" alt="">
+
+							<h2>Information Signs</h2>
+						</a>
+						<p style="padding-bottom: 10px;">
+							"The information signs give you more information about the start (and end) of a kind of
+							traffic
+							situation."
+						</p>
+						<hr class="visible-xs">
+					</div>
+					<div class="col-6">
+						<a href="">
+							<img style="max-height:100px" class="img-responsive center-block"
+								src="https://traffic-rules.com/img/asia/in/signs/prohibitory.png" alt="">
+							<h2>Prohibitory Signs</h2>
+						</a>
+						<p style="padding-bottom: 10px;">
+							"The prohibition signs forbid a certain action. They indicate certain actions that road
+							users
+							are not
+							allowed
+							to do."
+						</p>
+						<hr class="visible-xs">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div style="background-color: darkblue; ">
+				<div class="row">
+					<img class="img-responsive center-block" style="max-height: 100px; margin-top: 25px;"
+						src="https://traffic-rules.com/img/asia/in/country-exam.png" align="right">
+					<h1 style="color: white; align-self: center;">Practice Test</h1>
+					<p style="color:white;">
+						"With these practice tests you can prepare yourself for obtaining your driving license. The
+						practice questions
+						are based on the official theory exam. Select the correct answer and try to answer all questions
+						correctly.
+						The solutions appear below, try to learn from your mistakes!"
+					</p>
+				</div>
+				<hr>
+			</div>
+			<div class="row" style="width: auto; height: 150px;">
+
+				<button class="col" style="margin: 2px;" type="button">
+					<img src="https://traffic-rules.com/img/international/layout/random.png">Random Signs
+				</button>
+
+				<button class="col" style="margin: 2px; padding: 5px;">
+					<img src="https://traffic-rules.com/img/asia/in/country-signs.png">Traffic Signs
+				</button>
+
+				<button class="col" style="margin: 2px;">
+					<img style="max-height: 100px;"
+						src="https://traffic-rules.com/img/asia/in/signs/priority.png">Priority
+					Rules
+				</button>
+
+				<button class="col" style="margin: 2px;">
+					<img style="max-height: 100px;" src="https://traffic-rules.com/img/asia/in/signs/speed.png">Speed
+				</button>
+			</div>
+
+		</div>
+		<!-- Footer -->
+		<footer class="text-center text-lg-start bg-dark text-muted" style="margin-top: 100px; height: 100%;">
+			<!-- Section: Social media -->
+			<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+				<!-- Left -->
+				<div class="me-5 d-none d-lg-block">
+					<span></span>
+				</div>
+				<!-- Left -->
+
+				<!-- Right -->
+				<div>
+					<a href="" class="me-4 text-reset"><img style="max-height:60px;"
+							src="https://w7.pngwing.com/pngs/69/315/png-transparent-computer-icons-facebook-inc-logo-facebook-blue-text-rectangle.png">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="" class="me-4 text-reset"><img style="max-height: 60px;"
+							src="https://e7.pngegg.com/pngimages/708/311/png-clipart-twitter-twitter-thumbnail.png">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="" class="me-4 text-reset"><img style="max-height: 60px;"
+							src="https://staffordonline.org/wp-content/uploads/2019/01/Google.jpg">
+						<i class="fab fa-google"></i>
+					</a>
+					<a href="" class="me-4 text-reset"><img style="max-height:60px"
+							src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="" class="me-4 text-reset"><img style="max-height: 60px;"
+							src="https://1000logos.net/wp-content/uploads/2017/03/Color-of-the-LinkedIn-Logo.jpg">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a href="" class="me-4 text-reset"><img style="max-height:60px"
+							src="https://e7.pngegg.com/pngimages/914/758/png-clipart-computer-icons-logo-github-github-logo-logo-computer-program-thumbnail.png">
+						<i class="fab fa-github"></i>
+					</a>
+				</div>
+				<!-- Right -->
+			</section>
+			<!-- Section: Social media -->
+
+			<!-- Section: Links  -->
+			<section class="">
+				<div class="container text-center text-md-start mt-5">
+					<!-- Grid row -->
+					<div class="row mt-2">
+						<!-- Grid column -->
+
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<img src="https://traffic-rules.com/img/international/layout/terms.png">
+							</h6>
+							<p>
+								<a href="#!" class="text-reset">Terms of service</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Refund policy</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Privacy policy</a>
+							</p>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<img src="https://traffic-rules.com/img/international/layout/logo.png">
+							</h6>
+							<p>
+								<a href="#!" class="text-reset">Copyright © 2021</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Traffic-rules.com</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Content removal</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Help</a>
+							</p>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<img src="https://traffic-rules.com/img/international/layout/contact.png">
+							</h6>
+							<p><i class="fas fa-home me-3"></i>Belgium, Antwerp Loenhout 2990</p>
+							<p>
+								<i class="fas fa-envelope me-3"></i>
+								hotmaster@traffic-rules.com
+							</p>
+							<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+							<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+			</section>
+
+		</footer>
+</body>
+
+</html>
